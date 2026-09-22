@@ -94,8 +94,12 @@ h1 em{font-style:normal;background:linear-gradient(100deg,var(--red2),var(--embe
           mask-image:radial-gradient(ellipse 66% 56% at 62% 42%,#000 10%,transparent 72%);
   animation:drift 24s linear infinite}
 @keyframes drift{to{background-position:0 520px,520px 0}}
-.portrait{position:absolute;left:50%;bottom:0;width:80%;height:90%;transform:translateX(-50%);
-  object-fit:cover;object-position:top center;will-change:transform}
+/* full image width at 90% height (same 4:5 ratio, so no side crop); both edges feather into the card
+   so the shoulders dissolve instead of ending in a hard line */
+.portrait{position:absolute;left:5%;bottom:0;width:90%;height:90%;
+  object-fit:cover;object-position:top center;will-change:transform;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .portrait-ph{position:absolute;left:50%;bottom:0;width:76%;height:88%;transform:translateX(-50%);
   background:linear-gradient(180deg,rgba(225,29,72,.42),rgba(255,107,61,.14) 46%,transparent 92%);
   -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 130'%3E%3Cpath fill='%23000' d='M50 8c9 0 15 7 15 17 0 7-2 12-5 16 12 4 22 11 26 22 5 14 7 40 7 67H7c0-27 2-53 7-67 4-11 14-18 26-22-3-4-5-9-5-16 0-10 6-17 15-17z'/%3E%3C/svg%3E") no-repeat center/contain;

@@ -130,7 +130,7 @@ $$('.pthumb img[data-src]').forEach(i => imgIO.observe(i));
     if (!reduced && matchMedia('(pointer:fine)').matches) {
       addEventListener('mousemove', e => {
         const dx = e.clientX / innerWidth - .5, dy = e.clientY / innerHeight - .5;
-        img.style.transform = `translateX(calc(-50% + ${dx * -16}px)) translateY(${dy * -10}px)`;
+        img.style.transform = `translate(${dx * -16}px, ${dy * -10}px)`;
       }, { passive: true });
     }
   };
