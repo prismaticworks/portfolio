@@ -1,6 +1,7 @@
 import { initChain }  from './chain.js';
 import { initRadar }  from './radar.js';
 import { initScanner } from './scanner.js';
+import { TOOLS, ICONS } from './logos.js';
 import { initEmbers } from './embers.js';
 
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -31,9 +32,31 @@ if (!reduced) {
 }
 
 /* ---------- tech marquee ---------- */
-const tools = ['Python','Nuclei','Java','TypeScript','React','Splunk','QRadar','Azure Sentinel',
-  'CrowdStrike','SentinelOne','Cortex XDR','AWS','PostgreSQL','Docker','YARA','Velociraptor','Chronicle'];
-$('#mtrack').innerHTML = [...tools, ...tools].map(t => `<span>${t}</span>`).join('');
+const mark = t => {
+  const paths = ICONS[t.icon];
+  const svg = paths
+    ? `<svg viewBox="0 0 24 24" aria-hidden="true">${paths.map(d => `<path d="${d}"/>`).join('')}</svg>`
+    : '';
+  return `<span>${svg}${t.label}</span>`;
+};
+$('#mtrack').innerHTML = [...TOOLS, ...TOOLS].map(mark).join('');
+
+/* Simple Icons normalises every mark into a square 24x24 box, so wordmarks
+   (Splunk, IBM, AWS) come out visually tiny next to symbol marks. Re-crop each
+   icon to its own content box and render them at a uniform optical HEIGHT,
+   letting width vary — the way a real logo row is set. */
+requestAnimationFrame(() => {
+  const H = 24, MAXW = 74;
+  $$('#mtrack svg').forEach(svg => {
+    try {
+      const b = svg.getBBox();
+      if (!b.width || !b.height) return;
+      svg.setAttribute('viewBox', `${b.x} ${b.y} ${b.width} ${b.height}`);
+      svg.style.height = H + 'px';
+      svg.style.width  = Math.min(H * b.width / b.height, MAXW) + 'px';
+    } catch (e) { /* not laid out yet — keep the square default */ }
+  });
+});
 
 /* ---------- scroll reveals + number counters ---------- */
 const io = new IntersectionObserver(entries => {
