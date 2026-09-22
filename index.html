@@ -154,10 +154,11 @@
         <span class="sev c">Critical</span><span class="pst">Deployed</span></div>
       <div class="pbody">
         <div class="ptop"><h3>Auto Verification Service</h3><div class="arrow">↗</div></div>
-        <p>Drives the Nuclei scanner to re-verify every reported finding individually — against external
-           targets and assets behind VPN or firewall. Consultants confirm a finding isn't a false positive;
-           customers retest it themselves once patched.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Nuclei</span><span class="tag">VPN</span></div>
+        <p>Automated re-testing service that independently re-checks every reported vulnerability and
+           records a verdict against it — reaching internet-facing targets as well as assets inside
+           restricted internal environments. Takes most of the manual false-positive review out of an
+           engagement, and lets a customer confirm their own fix without waiting on a retest.</p>
+        <div class="tags"><span class="tag">Automation</span><span class="tag">Vulnerability verification</span><span class="tag">Backend services</span></div>
       </div></a>
 
     <a class="pcard r" href="#"><div class="pthumb">
@@ -165,10 +166,10 @@
         <span class="sev h">High</span><span class="pst">Hackathon</span></div>
       <div class="pbody">
         <div class="ptop"><h3>Asset Inventory Scanner</h3><div class="arrow">↗</div></div>
-        <p>NetSPI Hackathon build. Real-time vulnerability assessment across IT infrastructure — maps
-           services from a PostgreSQL asset inventory to known CVEs using NIST NVD CPE data, with CVSS
-           risk scoring, host-grouped dashboards and CSV/JSON export.</p>
-        <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">NIST NVD</span><span class="tag">CVSS</span></div>
+        <p>Hackathon build. Turns a raw infrastructure inventory into a live picture of known exposure —
+           matching running services against public vulnerability data, scoring severity, and grouping
+           findings by host so each owner sees only what is theirs. Exports for downstream reporting.</p>
+        <div class="tags"><span class="tag">Data pipeline</span><span class="tag">Risk scoring</span><span class="tag">Dashboards</span></div>
       </div></a>
 
     <a class="pcard r" href="#"><div class="pthumb">
@@ -176,9 +177,10 @@
         <span class="sev m">Medium</span><span class="pst">In use</span></div>
       <div class="pbody">
         <div class="ptop"><h3>List Management System</h3><div class="arrow">↗</div></div>
-        <p>Python GUI that centralises management of SIEM reference sets — create, modify and delete
-           their data straight through the SIEM's API, without touching the console.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">SIEM API</span></div>
+        <p>Centralises the reference data detection rules depend on — the allow-lists, watch-lists and
+           lookup sets that decide what fires and what stays quiet. Analysts create, amend and retire
+           entries from a single interface instead of working through the platform console.</p>
+        <div class="tags"><span class="tag">Internal tooling</span><span class="tag">Detection support</span><span class="tag">Platform APIs</span></div>
       </div></a>
 
     <a class="pcard r" href="#"><div class="pthumb">
