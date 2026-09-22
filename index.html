@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vaibhav Kunjir — Security Research Engineer</title>
+<meta name="description" content="Security Research Engineer at NetSPI. Five years across offensive security tooling and threat detection — scanners, detection rules and automation, in Python, Java and TypeScript.">
+<meta property="og:title" content="Vaibhav Kunjir — Security Research Engineer">
+<meta property="og:description" content="Offensive tooling and threat detection. Both sides of the line.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0506">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="prog"></div>
+<div id="glow"></div>
+
+<nav id="nav"><div class="wrap nav-in">
+  <a class="logo" href="#top"><i>VK</i> Vaibhav Kunjir</a>
+  <div class="nav-links">
+    <a href="#duality">Both sides</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#certs">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="btn primary mag" href="#contact">Let's talk</a>
+</div></nav>
+
+<!-- ============ HERO ============ -->
+<header id="top">
+  <div id="heroPlate"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Security Research Engineer · NetSPI</div>
+      <h1>
+        <span class="l"><span>I break it,</span></span>
+        <span class="l"><span>then I teach</span></span>
+        <span class="l"><span>systems to <em>catch it.</em></span></span>
+      </h1>
+      <p class="sub">Five years across <b>offensive security tooling</b> and <b>threat detection</b> —
+        building the scanners, rules and automation that carry security work at scale.
+        Python, Java and TypeScript, on both sides of the line.</p>
+      <div class="cta">
+        <a class="btn primary mag" href="#work">View the tooling</a>
+        <a class="btn mag" href="#contact">Get in touch</a>
+        <a class="btn mag" href="assets/Vaibhav-Kunjir-Resume.pdf" download>Résumé ↓</a>
+      </div>
+    </div>
+    <div class="visual" id="visual">
+      <div class="vgrid"></div>
+      <canvas id="embers"></canvas>
+      <div class="portrait-ph" id="portraitPh"></div>
+      <div class="vtag">[ PUNE · IN ]</div>
+      <div class="vtag2">● AVAILABLE</div>
+      <div class="ph-note" id="phNote">— portrait slot · drop your photo in assets/portrait.png —</div>
+    </div>
+  </div>
+
+  <div class="wrap"><div class="marquee"><div class="mtrack" id="mtrack"></div></div></div>
+</header>
+
+<!-- ============ STATS ============ -->
+<section style="padding-top:88px"><div class="wrap">
+  <div class="stats r">
+    <div class="stat"><b data-n="5">0</b><p>Years in security</p></div>
+    <div class="stat"><b data-n="7">0</b><p>SIEM platforms</p></div>
+    <div class="stat"><b data-n="3">0</b><p>Microsoft certs</p></div>
+    <div class="stat"><b data-n="1">0</b><p>Published paper</p></div>
+  </div>
+</div></section>
+
+<!-- ============ DUALITY — signature piece ============ -->
+<section id="duality" class="duality"><div class="wrap">
+  <div class="shead r">
+    <div class="skicker">Offence &amp; defence</div>
+    <h2>I've worked <em>both sides</em><br>of the <span class="t">same line.</span></h2>
+    <p class="slead">Most engineers pick one. I spent three years writing detections for what
+      attackers do, and now I build the tooling that does it. Watch an attack chain run —
+      and watch detection catch it.</p>
+  </div>
+
+  <div class="chain-wrap r">
+    <div class="chain-head">
+      <span class="o">◤ OFFENSIVE — ATTACK CHAIN</span>
+      <span>ATT&amp;CK PROGRESSION</span>
+      <span class="d">DETECTION SWEEP — DEFENSIVE ◢</span>
+    </div>
+    <canvas id="chain"></canvas>
+    <div class="chain-foot">
+      <span class="r"><i></i>Attack agent in transit</span>
+      <span class="g"><i></i>Detection sweep · intercept</span>
+      <span id="chainStat">INTERCEPTED 0</span>
+    </div>
+  </div>
+
+  <div class="split">
+    <div class="side off r">
+      <div class="side-head">
+        <span class="side-tag">Red · Offensive</span>
+        <h3>Building the things that find it.</h3>
+        <p>At NetSPI — scanners, platform integrations and automated vulnerability
+           verification for offensive security workflows.</p>
+      </div>
+      <div class="scan-box"><canvas id="scanner"></canvas></div>
+      <div class="readout">
+        <div><b data-n="4">0</b><span>Tools shipped</span></div>
+        <div><b data-n="5">0</b><span>Languages</span></div>
+        <div><b data-n="5">0</b><span>Cloud &amp; data</span></div>
+      </div>
+      <ul>
+        <li><span><b>Scanner development</b> — Nuclei templating, automated verification, template management.</span></li>
+        <li><span><b>Platform integrations</b> — backend APIs, PostgreSQL, and React UI for consultant workflows.</span></li>
+        <li><span><b>Coverage &amp; reliability</b> — improving scanner accuracy and operational visibility.</span></li>
+      </ul>
+    </div>
+
+    <div class="side def r">
+      <div class="side-head">
+        <span class="side-tag">Blue · Defensive</span>
+        <h3>Teaching systems to see it.</h3>
+        <p>SME for QRadar and Azure Sentinel at ReliaQuest — detection rules built through
+           continuous R&amp;D and shipped via CI/CD.</p>
+      </div>
+      <div class="radar-box"><canvas id="radar"></canvas></div>
+      <div class="readout">
+        <div><b data-n="7">0</b><span>SIEM platforms</span></div>
+        <div><b data-n="5">0</b><span>EDR suites</span></div>
+        <div><b data-n="6">0</b><span>Query languages</span></div>
+      </div>
+      <ul>
+        <li><span><b>Detection engineering</b> — rule development, tuning and CI/CD deployment.</span></li>
+        <li><span><b>Malware analysis</b> — PE/non-PE, macros, code injection, hooking, process hollowing.</span></li>
+        <li><span><b>DFIR</b> — Velociraptor, Redline, Mandiant IOC Editor, ransomware response.</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ WORK ============ -->
+<section id="work"><div class="wrap">
+  <div class="shead shead-row r">
+    <div>
+      <div class="skicker">Selected work</div>
+      <h2>Tooling that ships into<br><em>live engagements.</em></h2>
+    </div>
+  </div>
+  <div class="pgrid">
+    <a class="pcard r" href="#"><div class="pthumb">
+        <img data-src="assets/proj-avs.webp" alt=""><div class="scanline"></div>
+        <span class="sev c">Critical</span><span class="pst">Deployed</span></div>
+      <div class="pbody">
+        <div class="ptop"><h3>Auto Verification Service</h3><div class="arrow">↗</div></div>
+        <p>Drives the Nuclei scanner to re-verify every reported finding individually — against external
+           targets and assets behind VPN or firewall. Consultants confirm a finding isn't a false positive;
+           customers retest it themselves once patched.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Nuclei</span><span class="tag">VPN</span></div>
+      </div></a>
+
+    <a class="pcard r" href="#"><div class="pthumb">
+        <img data-src="assets/proj-inventory.webp" alt=""><div class="scanline"></div>
+        <span class="sev h">High</span><span class="pst">Hackathon</span></div>
+      <div class="pbody">
+        <div class="ptop"><h3>Asset Inventory Scanner</h3><div class="arrow">↗</div></div>
+        <p>NetSPI Hackathon build. Real-time vulnerability assessment across IT infrastructure — maps
+           services from a PostgreSQL asset inventory to known CVEs using NIST NVD CPE data, with CVSS
+           risk scoring, host-grouped dashboards and CSV/JSON export.</p>
+        <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">NIST NVD</span><span class="tag">CVSS</span></div>
+      </div></a>
+
+    <a class="pcard r" href="#"><div class="pthumb">
+        <img data-src="assets/proj-lms.webp" alt=""><div class="scanline"></div>
+        <span class="sev m">Medium</span><span class="pst">In use</span></div>
+      <div class="pbody">
+        <div class="ptop"><h3>List Management System</h3><div class="arrow">↗</div></div>
+        <p>Python GUI that centralises management of SIEM reference sets — create, modify and delete
+           their data straight through the SIEM's API, without touching the console.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">SIEM API</span></div>
+      </div></a>
+
+    <a class="pcard r" href="#"><div class="pthumb">
+        <img data-src="assets/proj-secrypt.webp" alt=""><div class="scanline"></div>
+        <span class="sev h">High</span><span class="pst">Published</span></div>
+      <div class="pbody">
+        <div class="ptop"><h3>Secrypt — Cloud Password Manager</h3><div class="arrow">↗</div></div>
+        <p>End-to-end encrypted password manager built on AWS with Node.js, React and MySQL —
+           AES-256 and Bcrypt behind an HTTPS REST API. Published in IJSREM, March 2023.</p>
+        <div class="tags"><span class="tag">AWS</span><span class="tag">React</span><span class="tag">AES-256</span></div>
+      </div></a>
+  </div>
+</div></section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience"><div class="wrap">
+  <div class="shead r">
+    <div class="skicker">Trajectory</div>
+    <h2>SOC floor to<br><em>research engineering.</em></h2>
+  </div>
+  <div class="tl" id="tl">
+    <div class="tl-fill" id="tlFill"></div>
+
+    <div class="job r">
+      <div class="when">Jun 2025 — Present · 1 yr 4 mos</div>
+      <h3>NetSPI <span>· Pune</span></h3>
+      <div class="role">Security Research Engineer · Full-time · Hybrid</div>
+      <ul>
+        <li>Design and develop security scanners and automation tools using Python, Java and TypeScript/React.</li>
+        <li>Build and maintain platform integrations across backend APIs, databases and UI for offensive security workflows.</li>
+        <li>Improve scanner reliability, detection coverage and operational visibility for security consultants.</li>
+        <li>Automate vulnerability verification and template management to reduce manual review effort.</li>
+        <li>Collaborate with engineering and security teams on tooling, research and platform enhancements.</li>
+      </ul>
+      <div class="jskills"><b>Stack</b> — Python · Java · TypeScript · React · PostgreSQL · AWS · Docker · Nuclei · API development · security automation</div>
+    </div>
+
+    <div class="job r">
+      <div class="when">Sep 2023 — Jun 2025 · 1 yr 10 mos</div>
+      <h3>ReliaQuest <span>· Pune</span></h3>
+      <div class="role">Full-time · Hybrid · Two roles</div>
+      <div class="roles">
+
+        <div class="subrole">
+          <div class="rwhen">Feb 2025 — Jun 2025 · 5 mos</div>
+          <div class="rtitle">Cyber Security Specialist</div>
+          <ul>
+            <li>Conducted in-depth threat analysis and presented findings and security-posture recommendations directly to clients.</li>
+            <li>Recognised Subject Matter Expert for QRadar and Azure Sentinel.</li>
+          </ul>
+        </div>
+
+        <div class="subrole">
+          <div class="rwhen">Sep 2023 — Feb 2025 · 1 yr 6 mos</div>
+          <div class="rtitle">Threat Detection Developer</div>
+          <ul>
+            <li>Develop and continuously improve threat detection rules to identify and respond to security incidents.</li>
+            <li>Collaborate with cross-functional teams to enhance incident response procedures and adapt to emerging threats.</li>
+            <li>Conduct threat analysis and provide recommendations for improving security posture.</li>
+            <li>Stay current with threat intelligence and security best practices to proactively defend against new threats.</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="jskills">
+        <b>SIEM</b> — LogRhythm · QRadar · Google Chronicle · Splunk · Azure Sentinel · Sumo Logic · Exabeam · Devo<br>
+        <b>EDR</b> — CrowdStrike Falcon · Microsoft Defender · Cortex XDR · SentinelOne<br>
+        <b>Email</b> — O365 · SandBlast · Proofpoint
+      </div>
+    </div>
+
+    <div class="job r">
+      <div class="when">Nov 2021 — Sep 2023 · 1 yr 11 mos</div>
+      <h3>SecurityHQ <span>· Pune</span></h3>
+      <div class="role">Full-time · Three roles</div>
+      <div class="roles">
+
+        <div class="subrole">
+          <div class="rwhen">Jun 2023 — Sep 2023 · 4 mos · On-site</div>
+          <div class="rtitle">Senior Analyst</div>
+          <ul>
+            <li>Part of digital forensics and incident response engagements, including ransomware cases, through to remediation.</li>
+          </ul>
+        </div>
+
+        <div class="subrole">
+          <div class="rwhen">Apr 2022 — Jun 2023 · 1 yr 3 mos</div>
+          <div class="rtitle">Cyber Security Analyst</div>
+          <ul>
+            <li>Analysing security events using QRadar and Azure Sentinel, and providing mitigation.</li>
+            <li>Monitor and manage endpoints with EDR tools — Carbon Black, Cortex XDR and CrowdStrike.</li>
+            <li>Malware analysis: PE, non-PE, PDF, Office macros and scripts — API calls used by malware, and common techniques such as code injection, hooking and process hollowing.</li>
+            <li>Email analysis: managing Mimecast and analysing phishing and spam mail across O365 AIR, Mimecast and Proofpoint.</li>
+            <li>Analysing logs from O365, ATP, DLP, proxy, firewall and IDS/IPS.</li>
+          </ul>
+        </div>
+
+        <div class="subrole">
+          <div class="rwhen">Nov 2021 — Apr 2022 · 6 mos</div>
+          <div class="rtitle">Security Engineer</div>
+          <ul>
+            <li>Security monitoring and SIEM engineering on Azure Sentinel.</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="jskills"><b>Tooling</b> — QRadar · Azure Sentinel · SentinelOne · Carbon Black · Cortex XDR · CrowdStrike · Mimecast · Proofpoint</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ CERTS ============ -->
+<section id="certs"><div class="wrap">
+  <div class="shead r">
+    <div class="skicker def">Credentials</div>
+    <h2>Certified across the<br><span class="t">Microsoft security stack.</span></h2>
+  </div>
+  <div class="certs">
+    <div class="cert r"><div class="cid">SC-100</div>
+      <h3>Cybersecurity Architect Expert</h3><p>Microsoft · Jul 2024</p></div>
+    <div class="cert r"><div class="cid">SC-200</div>
+      <h3>Security Operations Analyst Associate</h3><p>Microsoft · Jan 2024</p></div>
+    <div class="cert r"><div class="cid">MS-500</div>
+      <h3>Microsoft 365 Security Administration</h3><p>Microsoft</p></div>
+  </div>
+</div></section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact"><div class="wrap">
+  <div class="fcta r">
+    <h2>Let's build something<br>that holds under attack.</h2>
+    <p>Open to security engineering and research conversations.</p>
+    <div class="cta">
+      <a class="btn primary mag" href="mailto:vaibhavskunjir@gmail.com">vaibhavskunjir@gmail.com</a>
+      <a class="btn mag" href="https://www.linkedin.com/in/vaibhav-kunjir-5bb822172/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+  <footer>
+    <span>© 2026 Vaibhav Kunjir</span>
+    <span>Pune, Maharashtra · India</span>
+    <span><a href="https://www.linkedin.com/in/vaibhav-kunjir-5bb822172/" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp;·&nbsp; <a href="https://www.thedarktech.com" target="_blank" rel="noopener">thedarktech.com</a></span>
+  </footer>
+</div></section>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
